@@ -1,4 +1,4 @@
-# Tesla-Menu
+# MMDebugSwitcherNS 
 
-The initial overlay menu to be loaded by nx-ovlloader. It's main purpose is to let the user select other overlays to be loaded.
-The default directory for overlays is `/switch/.overlays` where only .ovl files (Plain old .nro files renamed to .ovl to differentiate them from normal homebrew) get loaded.
+Change game susbstates in debug like in PC version of debug mode for Project Diva Megamix for Nintendo Switch! It's main purpose is to let the user select any substate (with automatic main state) to be loaded.
+The directory for overlay is `sdmc:/switch/.overlays`
