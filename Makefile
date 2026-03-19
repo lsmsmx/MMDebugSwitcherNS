@@ -37,15 +37,21 @@ include $(DEVKITPRO)/libnx/switch_rules
 #   of a homebrew executable (.nro). This is intended to be used for sysmodules.
 #   NACP building is skipped as well.
 #---------------------------------------------------------------------------------
-APP_TITLE	:=	Tesla Menu
-APP_VERSION	:=	v1.1.2
 
-TARGET		:=	$(notdir $(CURDIR))
+APP_TITLE   :=  Diva Gamestate Switcher
+APP_VERSION	:=	v1.0.0
+APP_AUTHOR  :=  MikuLover2007
+
+TARGET		:=	MMDebugSwitch
 BUILD		:=	build
 SOURCES		:=	source
 DATA		:=	data
 INCLUDES	:=	include
 #ROMFS	:=	romfs
+
+export CFLAGS   += -I$(DEVKITPRO)/portlibs/switch/include
+export CXXFLAGS += -I$(DEVKITPRO)/portlibs/switch/include
+export LDFLAGS  += -L$(DEVKITPRO)/portlibs/switch/lib -ltesla
 
 #---------------------------------------------------------------------------------
 # options for code generation
@@ -115,6 +121,8 @@ export INCLUDE	:=	$(foreach dir,$(INCLUDES),-I$(CURDIR)/$(dir)) \
 			-I$(CURDIR)/$(BUILD)
 
 export LIBPATHS	:=	$(foreach dir,$(LIBDIRS),-L$(dir)/lib)
+
+
 
 ifeq ($(strip $(CONFIG_JSON)),)
 	jsons := $(wildcard *.json)
