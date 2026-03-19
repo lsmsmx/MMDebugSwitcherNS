@@ -8,4 +8,5 @@ Instruction:
 - Find the Diva Gamestate Switcher
 - Select Target Scene with DPad Right-Left
 - Hit >>> JUMP TO SCENE <<<
+  
 Note: some substates make the game crash, same as in MM+
